@@ -3,8 +3,10 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 
-TELEGRAM_TOKEN = "بۇ يەرگە Telegram Bot Token"
-GROQ_KEY = "بۇ يەرگە Groq API Key"
+import os
+
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+GROQ_KEY = os.environ.get("GROQ_KEY")
 
 
 # 🧠 Memory
